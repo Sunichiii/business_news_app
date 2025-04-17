@@ -10,8 +10,8 @@ class News {
 
   factory News.fromJson(Map<String, dynamic> json) {
     return News(
-      title: json['title'],
-      description: json['description'],
+      title: json['title'] ?? 'No title',
+      description: json['description'] ?? 'No description available',
       urlToImage: json['urlToImage'] ?? '',
       //image nabhako case ma null handle garcha
     );
